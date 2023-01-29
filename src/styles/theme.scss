@@ -1,0 +1,745 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+@include mat.core();
+// 生成网站：http://mcg.mbitson.com
+// 颜色生成网站：https://color.adobe.com/zh/create/color-wheel
+
+// #region color token
+// #region 粉色 color token
+$md-pink: (
+  50: #fdf8fc,
+  100: #faeef7,
+  200: #f6e3f2,
+  300: #f2d7ed,
+  400: #f0cfe9,
+  500: #edc6e5,
+  600: #ebc0e2,
+  700: #e8b9de,
+  800: #e5b1da,
+  900: #e0a4d3,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffffff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+$md-pink-accent: (
+  50: #fcfefb,
+  100: #f7fcf6,
+  200: #f2faf0,
+  300: #edf8ea,
+  400: #e9f7e6,
+  500: #e5f5e1,
+  600: #e2f4dd,
+  700: #def2d9,
+  800: #daf0d5,
+  900: #d3eecd,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffffff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+$md-pink-warn: (
+  50: #fcf6f6,
+  100: #f8e9e9,
+  200: #f4dbdb,
+  300: #f0cccc,
+  400: #ecc1c1,
+  500: #e9b6b6,
+  600: #e6afaf,
+  700: #e3a6a6,
+  800: #df9e9e,
+  900: #d98e8e,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffefef,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+// #endregion 粉色 color token
+
+// #region 绿色 color token
+$md-green: (
+  50: #f8fbfb,
+  100: #eef5f5,
+  200: #e3efee,
+  300: #d7e9e7,
+  400: #cfe4e2,
+  500: #c6dfdd,
+  600: #c0dbd9,
+  700: #b9d7d4,
+  800: #b1d2cf,
+  900: #a4cac7,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #f5fffe,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+$md-green-accent: (
+  50: #faf9fc,
+  100: #f3eff8,
+  200: #ebe4f4,
+  300: #e3d9f0,
+  400: #ddd1ec,
+  500: #d7c9e9,
+  600: #d3c3e6,
+  700: #cdbce3,
+  800: #c7b5df,
+  900: #bea9d9,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffffff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+$md-green-warn: (
+  50: #fcf6f6,
+  100: #f8e9e9,
+  200: #f4dbdb,
+  300: #f0cccc,
+  400: #ecc1c1,
+  500: #e9b6b6,
+  600: #e6afaf,
+  700: #e3a6a6,
+  800: #df9e9e,
+  900: #d98e8e,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffefef,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+// #endregion 绿色 color token
+
+// #region 黄色 color token
+$md-yellow: (
+  50: #fdfdf8,
+  100: #fafaee,
+  200: #f6f6e3,
+  300: #f2f2d7,
+  400: #f0f0cf,
+  500: #ededc6,
+  600: #ebebc0,
+  700: #e8e8b9,
+  800: #e5e5b1,
+  900: #e0e0a4,
+  C900: #5bbf00,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffffff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+$md-yellow-accent: (
+  50: #f8fdfd,
+  100: #eefafa,
+  200: #e3f6f6,
+  300: #d7f2f2,
+  400: #cff0f0,
+  500: #c6eded,
+  600: #c0ebeb,
+  700: #b9e8e8,
+  800: #b1e5e5,
+  900: #a4e0e0,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffffff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+$md-yellow-warn: (
+  50: #fef6f6,
+  100: #fceaea,
+  200: #fadcdc,
+  300: #f7cdcd,
+  400: #f6c3c3,
+  500: #f4b8b8,
+  600: #f3b1b1,
+  700: #f1a8a8,
+  800: #efa0a0,
+  900: #ec9191,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffffff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+// #endregion 黄色 color token
+
+// #region 蓝色 color token
+$md-blue: (
+  50: #f8fbfd,
+  100: #edf5fa,
+  200: #e1eef7,
+  300: #d5e7f3,
+  400: #cce2f1,
+  500: #c3ddee,
+  600: #bdd9ec,
+  700: #b5d4e9,
+  800: #aecfe7,
+  900: #a1c7e2,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffffff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$md-blue-accent: (
+  50: #fdf8fb,
+  100: #faedf5,
+  200: #f7e1ee,
+  300: #f3d5e7,
+  400: #f1cce2,
+  500: #eec3dd,
+  600: #ecbdd9,
+  700: #e9b5d4,
+  800: #e7aecf,
+  900: #e2a1c7,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffffff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$md-blue-warn: (
+  50: #fcf6f6,
+  100: #f8e9e9,
+  200: #f4dbdb,
+  300: #f0cccc,
+  400: #ecc1c1,
+  500: #e9b6b6,
+  600: #e6afaf,
+  700: #e3a6a6,
+  800: #df9e9e,
+  900: #d98e8e,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffefef,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+// #endregion 蓝色 color token
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-dark-warn: (
+  50: #fff0f0,
+  100: #ffdada,
+  200: #ffc2c2,
+  300: #ffa9a9,
+  400: #ff9696,
+  500: #ff8484,
+  600: #ff7c7c,
+  700: #ff7171,
+  800: #ff6767,
+  900: #ff5454,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #fff9f9,
+  A700: #ffe0e0,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+// #endregion color token
+
+// #region theme define
+$app-dark-warn: mat.define-palette($md-dark-warn);
+
+// 浅粉色 主题
+$app-light-pink-primary: mat.define-palette($md-pink);
+$app-light-pink-accent: mat.define-palette($md-pink-accent);
+$app-light-pink-warn: mat.define-palette($md-pink-warn);
+$app-light-pink-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $app-light-pink-primary,
+      accent: $app-light-pink-accent,
+      warn: $app-light-pink-warn,
+    ),
+  )
+);
+$app-dark-pink-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $app-light-pink-primary,
+      accent: $app-light-pink-accent,
+      warn: $app-dark-warn,
+    ),
+  )
+);
+
+// 浅绿色 主题
+$app-light-green-primary: mat.define-palette($md-green);
+$app-light-green-accent: mat.define-palette($md-green-accent);
+$app-light-green-warn: mat.define-palette($md-green-warn);
+$app-light-green-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $app-light-green-primary,
+      accent: $app-light-green-accent,
+      warn: $app-light-green-warn,
+    ),
+  )
+);
+$app-dark-green-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $app-light-green-primary,
+      accent: $app-light-green-accent,
+      warn: $app-dark-warn,
+    ),
+  )
+);
+
+// 浅黄色 主题
+$app-light-yellow-primary: mat.define-palette($md-yellow);
+$app-light-yellow-accent: mat.define-palette($md-yellow-accent);
+$app-light-yellow-warn: mat.define-palette($md-yellow-warn);
+$app-light-yellow-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $app-light-yellow-primary,
+      accent: $app-light-yellow-accent,
+      warn: $app-light-yellow-warn,
+    ),
+  )
+);
+$app-dark-yellow-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $app-light-yellow-primary,
+      accent: $app-light-yellow-accent,
+      warn: $app-dark-warn,
+    ),
+  )
+);
+
+// 浅蓝色 主题
+$app-light-blue-primary: mat.define-palette($md-blue);
+$app-light-blue-accent: mat.define-palette($md-blue-accent);
+$app-light-blue-warn: mat.define-palette($md-blue-warn);
+$app-light-blue-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $app-light-blue-primary,
+      accent: $app-light-blue-accent,
+      warn: $app-light-blue-warn,
+    ),
+  )
+);
+$app-dark-blue-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $app-light-blue-primary,
+      accent: $app-light-blue-accent,
+      warn: $app-dark-warn,
+    ),
+  )
+);
+// #endregion theme define
+
+// #region theme class creater
+// 生成主题相关的 css class 和 css 变量 You can generate CSS classes and CSS variables from material theme
+@mixin generateColors($prefix, $palette) {
+  $colors-map: ();
+
+  @each $key, $value in $palette {
+    @if $key !=contrast {
+      .app-#{$prefix}-#{$key} {
+        color: map-get($palette, $key);
+      }
+      .app-bg-#{$prefix}-#{$key} {
+        background-color: map-get($palette, $key);
+      }
+
+      $map: ();
+      $map: map-merge(
+        $map,
+        (
+          $key: $value,
+        )
+      );
+      $colors-map: map-merge($colors-map, $map);
+    }
+  }
+
+  :root {
+    @each $key, $value in $colors-map {
+      --app-#{$prefix}-#{$key}: #{$value};
+    }
+  }
+}
+
+// 创建一系列主题相关的class 比如：app-primary-900
+@mixin generate-app-pink-classes {
+  @include generateColors(primary, $app-light-pink-primary);
+  @include generateColors(accent, $app-light-pink-accent);
+  @include generateColors(warning, $app-light-pink-warn);
+}
+
+$menu-underline-color-light: #3a3a3a;
+$menu-underline-color-dark: #ddd;
+
+.app-pink-theme {
+  @include generate-app-pink-classes;
+  &.light-model {
+    @include mat.all-component-colors($app-light-pink-theme);
+    .mat-toolbar {
+      background-color: mat.get-color-from-palette(
+        $app-light-pink-primary,
+        100
+      );
+      .menu-link.active {
+        color: mat.get-color-from-palette($app-light-pink-primary, 900);
+      }
+      .menu-link::after {
+        background-color: mat.get-color-from-palette(
+          $app-light-pink-primary,
+          900
+        );
+      }
+    }
+  }
+  &.dark-model {
+    @include mat.all-component-colors($app-dark-pink-theme);
+    .mat-toolbar {
+      .menu-link::after {
+        background-color: $menu-underline-color-dark;
+      }
+    }
+  }
+}
+
+@mixin generate-app-green-classes {
+  @include generateColors(primary, $app-light-green-primary);
+  @include generateColors(accent, $app-light-green-accent);
+  @include generateColors(warning, $app-light-green-warn);
+}
+.app-green-theme {
+  @include generate-app-green-classes;
+  &.light-model {
+    @include mat.all-component-colors($app-light-green-theme);
+    .mat-toolbar {
+      background-color: mat.get-color-from-palette(
+        $app-light-green-primary,
+        100
+      );
+
+      .menu-link.active {
+        color: mat.get-color-from-palette($app-light-green-primary, 900);
+      }
+      .menu-link::after {
+        background-color: mat.get-color-from-palette(
+          $app-light-green-primary,
+          900
+        );
+      }
+    }
+  }
+  &.dark-model {
+    @include mat.all-component-colors($app-dark-green-theme);
+    .mat-toolbar {
+      .menu-link::after {
+        background-color: $menu-underline-color-dark;
+      }
+    }
+  }
+}
+
+@mixin generate-app-yellow-classes {
+  @include generateColors(primary, $app-light-yellow-primary);
+  @include generateColors(accent, $app-light-yellow-accent);
+  @include generateColors(warning, $app-light-yellow-warn);
+}
+.app-yellow-theme {
+  @include generate-app-yellow-classes;
+  &.light-model {
+    @include mat.all-component-colors($app-light-yellow-theme);
+    .mat-toolbar {
+      background-color: mat.get-color-from-palette(
+        $app-light-yellow-primary,
+        100
+      );
+      .menu-link.active {
+        color: mat.get-color-from-palette($app-light-yellow-primary, 900);
+      }
+      .menu-link::after {
+        background-color: mat.get-color-from-palette(
+          $app-light-yellow-primary,
+          900
+        );
+      }
+    }
+  }
+  &.dark-model {
+    @include mat.all-component-colors($app-dark-yellow-theme);
+    .mat-toolbar {
+      .menu-link::after {
+        background-color: $menu-underline-color-dark;
+      }
+    }
+  }
+}
+
+@mixin generate-app-blue-classes {
+  @include generateColors(primary, $app-light-blue-primary);
+  @include generateColors(accent, $app-light-blue-accent);
+  @include generateColors(warning, $app-light-blue-warn);
+}
+.app-blue-theme {
+  @include generate-app-blue-classes;
+  &.light-model {
+    @include mat.all-component-colors($app-light-blue-theme);
+    .mat-toolbar {
+      background-color: mat.get-color-from-palette(
+        $app-light-blue-primary,
+        100
+      );
+      .menu-link.active {
+        color: mat.get-color-from-palette($app-light-blue-primary, 900);
+      }
+      .menu-link::after {
+        background-color: mat.get-color-from-palette(
+          $app-light-blue-primary,
+          900
+        );
+      }
+    }
+  }
+  &.dark-model {
+    @include mat.all-component-colors($app-dark-blue-theme);
+    .mat-toolbar {
+      .menu-link::after {
+        background-color: $menu-underline-color-dark;
+      }
+    }
+  }
+}
+// #endregion theme class creater
+
+// .mat-app-background {
+//   background-color: #fafafa;
+// }
+
+// $angular-primary: mat.define-palette($md-green, 50);
+// $angular-accent: mat.define-palette($md-accent, 50);
+// $angular-warn: mat.define-palette(mat.$red-palette, 100);
+
+// $angular-primary: mat.define-palette(mat.$teal-palette, 500, 100, 900);
+// $angular-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// $angular-warn: mat.define-palette(mat.$red-palette);
+
+// $angular-dark-theme: mat.define-dark-theme(
+//   (
+//     color: (
+//       primary: $angular-primary,
+//       accent: $angular-accent,
+//       warn: $angular-warn,
+//     ),
+//   )
+// );
+
+// .darkMode {
+//   @include mat.all-component-colors($angular-dark-theme);
+// }
+
+// 变量定义
+$nav-height: 64px; // 导航菜单bar的高度

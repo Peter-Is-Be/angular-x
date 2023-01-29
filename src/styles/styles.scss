@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "theme.scss";
+
+html,
+body {
+  height: 100vh;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dark-model {
+  ::-webkit-scrollbar {
+    height: 8px; // 水平滚动条的宽
+    width: 8px; // 垂直滚动条的宽
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d4d4d441;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgba(240, 240, 240, 0.07);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d4d4d46e;
+  }
+}
+.light-model {
+  ::-webkit-scrollbar {
+    height: 8px; // 水平滚动条的宽
+    width: 8px; // 垂直滚动条的宽
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #36363641;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.07);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3636366e;
+  }
+}
+/* 滚动条样式 */
+@media (max-width: 960px) {
+  .pc {
+    display: none !important;
+  }
+}
+@media (min-width: 960px) {
+  .mobile {
+    display: none !important;
+  }
+}

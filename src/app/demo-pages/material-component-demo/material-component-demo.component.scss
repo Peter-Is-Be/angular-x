@@ -1,0 +1,291 @@
+@use "@angular/material" as mat;
+@import "../../../styles/theme.scss";
+h3 {
+  padding: 8px;
+}
+section {
+  display: table;
+  margin: 16px;
+}
+
+@property --p {
+  syntax: "<position>";
+  inherits: false;
+  initial-value: at left;
+}
+@property --c1 {
+  syntax: "<color>";
+  inherits: false;
+  --c1: rgba(255, 86, 34, 0.9);
+}
+@property --c2 {
+  syntax: "<color>";
+  inherits: false;
+  --c2: rgba(197, 110, 219, 0.9);
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 32px 0;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+
+  &.dark-model::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 400%;
+    width: 200%;
+    border-radius: 50%;
+    --p: at left;
+    --c1: rgb(172, 47, 9, 0.9);
+    --c2: rgba(102, 48, 116, 0.9);
+    background: radial-gradient(var(--p), var(--c1), var(--c2));
+    animation: to-dark-bg 1s linear 1 forwards, bg-rotate 30s linear infinite;
+  }
+  @keyframes to-dark-bg {
+    from {
+      --p: at left;
+      --c1: rgba(255, 86, 34, 0.9);
+      --c2: rgba(197, 110, 219, 0.9);
+    }
+    to {
+      --p: at right;
+      --c1: rgb(172, 47, 9, 0.9);
+      --c2: rgba(102, 48, 116, 0.9);
+    }
+  }
+  &.light-model::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 400%;
+    width: 200%;
+    border-radius: 50%;
+    --p: at left;
+    --c1: rgba(255, 86, 34, 0.8);
+    --c2: rgba(197, 110, 219, 0.8);
+    background: radial-gradient(var(--c1), var(--c2));
+    animation: to-light-bg 1s linear 1 forwards, bg-rotate 30s linear infinite;
+  }
+  @keyframes to-light-bg {
+    from {
+      --p: at left;
+      --c1: rgb(172, 47, 9, 0.8);
+      --c2: rgba(102, 48, 116, 0.8);
+    }
+    to {
+      --p: at right;
+      --c1: rgba(255, 86, 34, 0.8);
+      --c2: rgba(197, 110, 219, 0.8);
+    }
+  }
+
+  @keyframes bg-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  img {
+    width: 80%;
+    max-width: 1600px;
+    object-fit: contain;
+    max-height: calc(100vh - 64px - 41px - 64px);
+    border-radius: 32px;
+    box-shadow: 0 0 16px 0 #000000c9;
+    user-select: none;
+    -webkit-user-drag: none;
+    z-index: 1;
+    opacity: 0.95;
+    transition: 0.35s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+  }
+
+  .circles li:nth-child(1) {
+    left: 15%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+    background: rgba(233, 120, 120, 0.2);
+  }
+
+  .circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+    background: rgba(127, 88, 177, 0.2);
+  }
+
+  .circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+    background: rgba(88, 101, 177, 0.2);
+  }
+
+  .circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+    background: rgba(88, 159, 177, 0.2);
+  }
+
+  .circles li:nth-child(5) {
+    left: 5%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+    background: rgba(88, 177, 177, 0.2);
+  }
+
+  .circles li:nth-child(6) {
+    left: 25%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+    background: rgba(88, 177, 128, 0.2);
+  }
+
+  .circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+    background: rgba(152, 185, 32, 0.2);
+  }
+
+  .circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+  }
+
+  .circles li:nth-child(9) {
+    left: 90%;
+    width: 200px;
+    height: 200px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+    background: rgb(65 184 203 / 40%);
+    border-radius: 20% 45% 10% 90% !important;
+  }
+
+  .circles li:nth-child(10) {
+    left: 5%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+    background: rgba(250, 74, 74, 0.2);
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+    }
+
+    100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+    }
+  }
+}
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-row {
+  display: table-cell;
+  max-width: 600px;
+  .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .item {
+    margin-top: 8px;
+    margin-right: 8px;
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  .item {
+    margin-top: 8px;
+  }
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+ol,
+ul {
+  margin-left: 1em;
+}

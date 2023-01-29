@@ -1,0 +1,166 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+@import "../styles/theme.scss";
+
+:host {
+  .main-container {
+    height: 100vh;
+  }
+
+  nav {
+    height: $nav-height;
+    z-index: 2;
+    & * {
+      transition: 0.35s;
+    }
+    .mat-toolbar {
+      height: $nav-height;
+    }
+    a.logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 8px;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+      img {
+        height: calc($nav-height - 16px);
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+      }
+    }
+
+    h1 {
+      margin: 0;
+    }
+    .example-spacer {
+      flex: 1 1 auto;
+    }
+
+    .menu-link {
+      position: relative;
+      height: 100%;
+      border-radius: 0;
+      font-size: 16px;
+      &.active {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 3px;
+          width: 100%;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 0%;
+        transform: 0.5s;
+      }
+      &:hover:after {
+        width: 100%;
+      }
+    }
+  }
+
+  .drawer-sidenav {
+    height: calc(100vh - $nav-height);
+    .drawer-content {
+      padding: 24px;
+      max-width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .main-body {
+    width: 100%;
+    & * {
+      transition: 0.35s;
+    }
+  }
+}
+
+// color swatch
+.color-swatch-btn {
+  :hover {
+    .color-swatch-icon {
+      opacity: 0.2;
+    }
+  }
+  .color-swatch-icon {
+    opacity: 0;
+  }
+
+  &.color-swatch-btn-checked {
+    background-color: rgba(128, 128, 128, 0.082);
+    :hover {
+      .color-swatch-icon {
+        opacity: 1;
+      }
+    }
+    .color-swatch-icon {
+      opacity: 1;
+    }
+  }
+
+  mat-icon.mat-icon {
+    margin-right: 0;
+  }
+
+  .color-swatch {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    .color-strip {
+      width: 72px;
+      height: 18px;
+      margin-right: 16px;
+    }
+
+    &.color-swatch-green {
+      .color-strip {
+        background-color: mat.get-color-from-palette($app-light-green-primary);
+      }
+      .color-swatch-icon {
+        color: mat.get-color-from-palette($app-light-green-accent);
+      }
+    }
+
+    &.color-swatch-pink {
+      .color-strip {
+        background-color: mat.get-color-from-palette($app-light-pink-primary);
+      }
+      .color-swatch-icon {
+        color: mat.get-color-from-palette($app-light-pink-accent);
+      }
+    }
+
+    &.color-swatch-blue {
+      .color-strip {
+        background-color: mat.get-color-from-palette($app-light-blue-primary);
+      }
+      .color-swatch-icon {
+        color: mat.get-color-from-palette($app-light-blue-accent);
+      }
+    }
+
+    &.color-swatch-yellow {
+      .color-strip {
+        background-color: mat.get-color-from-palette($app-light-yellow-primary);
+      }
+      .color-swatch-icon {
+        color: mat.get-color-from-palette($app-light-yellow-accent);
+      }
+    }
+  }
+}

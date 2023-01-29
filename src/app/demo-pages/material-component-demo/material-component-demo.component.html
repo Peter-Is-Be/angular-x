@@ -1,0 +1,314 @@
+<h3>主要设计风格参考</h3>
+<div class="banner" [ngClass]="themeModel$ |async">
+    <img src="/assets/image/grid_0.webp">
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<mat-divider></mat-divider>
+<h3>Buttons</h3>
+<section>
+    <div class="example-label">Basic</div>
+    <div class="example-row">
+        <button mat-button>Basic</button>
+        <button mat-button color="primary">Primary</button>
+        <button mat-button color="accent">Accent</button>
+        <button mat-button color="warn">Warn</button>
+        <button mat-button disabled>Disabled</button>
+        <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+    <div class="example-label">Raised</div>
+    <div class="example-row">
+        <button mat-raised-button>Basic</button>
+        <button mat-raised-button color="primary">Primary</button>
+        <button mat-raised-button color="accent">Accent</button>
+        <button mat-raised-button color="warn">Warn</button>
+        <button mat-raised-button disabled>Disabled</button>
+        <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+    <div class="example-label">Stroked</div>
+    <div class="example-row">
+        <button mat-stroked-button>Basic</button>
+        <button mat-stroked-button color="primary">Primary</button>
+        <button mat-stroked-button color="accent">Accent</button>
+        <button mat-stroked-button color="warn">Warn</button>
+        <button mat-stroked-button disabled>Disabled</button>
+        <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+    <div class="example-label">Flat</div>
+    <div class="example-row">
+        <button mat-flat-button>Basic</button>
+        <button mat-flat-button color="primary">Primary</button>
+        <button mat-flat-button color="accent">Accent</button>
+        <button mat-flat-button color="warn">Warn</button>
+        <button mat-flat-button disabled>Disabled</button>
+        <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+    <div class="example-label">Icon</div>
+    <div class="example-row">
+        <div class="example-flex-container">
+            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+                <mat-icon>home</mat-icon>
+            </button>
+            <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+                <mat-icon>open_in_new</mat-icon>
+            </button>
+        </div>
+    </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+    <div class="example-label">FAB</div>
+    <div class="example-row">
+        <div class="example-flex-container">
+            <div class="example-button-container">
+                <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+            <div class="example-button-container">
+                <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+                    <mat-icon>bookmark</mat-icon>
+                </button>
+            </div>
+            <div class="example-button-container">
+                <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+                    <mat-icon>home</mat-icon>
+                </button>
+            </div>
+            <div class="example-button-container">
+                <button mat-fab disabled aria-label="Example icon button with a heart icon">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+    <div class="example-label">Mini FAB</div>
+    <div class="example-row">
+        <div class="example-flex-container">
+            <div class="example-button-container">
+                <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <div class="example-button-container">
+                <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
+                    <mat-icon>plus_one</mat-icon>
+                </button>
+            </div>
+            <div class="example-button-container">
+                <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                    <mat-icon>filter_list</mat-icon>
+                </button>
+            </div>
+            <div class="example-button-container">
+                <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+                    <mat-icon>home</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<mat-divider></mat-divider>
+<h3>CheckBox</h3>
+<section>
+    <mat-checkbox class="example-margin" color="primary" checked="true">Check me!</mat-checkbox>
+    <mat-checkbox class="example-margin" color="primary">Disabled</mat-checkbox>
+</section>
+<mat-divider></mat-divider>
+<h3>Slide Toggle</h3>
+<section>
+    <mat-slide-toggle color="primary">primary</mat-slide-toggle>
+    <mat-slide-toggle color="accent">accent</mat-slide-toggle>
+    <mat-slide-toggle color="warn">warn</mat-slide-toggle>
+</section>
+<mat-divider></mat-divider>
+<h3>Slider</h3>
+<section>
+    <mat-slider>
+        <input matSliderThumb>
+    </mat-slider>
+</section>
+<mat-divider></mat-divider>
+<h3>Radio Button</h3>
+<section>
+    <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1" [checked]="true">Option 1</mat-radio-button>
+        <mat-radio-button value="2">Option 2</mat-radio-button>
+    </mat-radio-group>
+</section>
+<mat-divider></mat-divider>
+<h3>Card</h3>
+<section>
+    <div class="flex-row">
+        <mat-card class="example-card item app-bg-primary-100">
+            <mat-card-header>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                <mat-card-title>Shiba Inu</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>This card has divider and indeterminate progress as footer</p>
+                <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with
+                    mountainous terrain, the Shiba Inu was originally bred for hunting.</p>
+                <mat-divider></mat-divider>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+            </mat-card-actions>
+            <mat-card-footer class="app-bg-primary-900">
+                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+            </mat-card-footer>
+        </mat-card>
+
+        <mat-card class="example-card item">
+            <mat-card-header>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                <mat-card-title>Shiba Inu</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>This card has divider and indeterminate progress as footer</p>
+                <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with
+                    mountainous terrain, the Shiba Inu was originally bred for hunting.</p>
+                <mat-divider></mat-divider>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+            </mat-card-actions>
+            <mat-card-footer>
+                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+            </mat-card-footer>
+        </mat-card>
+
+        <mat-card class="example-card item app-bg-accent-200">
+            <mat-card-header>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                <mat-card-title>Shiba Inu</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>This card has divider and indeterminate progress as footer</p>
+                <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with
+                    mountainous terrain, the Shiba Inu was originally bred for hunting.</p>
+                <mat-divider></mat-divider>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+            </mat-card-actions>
+            <mat-card-footer>
+                <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+            </mat-card-footer>
+        </mat-card>
+
+        <mat-card class="example-card item app-bg-warn-200">
+            <mat-card-header>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                <mat-card-title>Shiba Inu</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>This card has divider and indeterminate progress as footer</p>
+                <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with
+                    mountainous terrain, the Shiba Inu was originally bred for hunting.</p>
+                <mat-divider></mat-divider>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+            </mat-card-actions>
+            <mat-card-footer>
+                <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+            </mat-card-footer>
+        </mat-card>
+    </div>
+</section>
+
+<mat-divider></mat-divider>
+<h3>Form</h3>
+<section>
+    <div class="flex-column">
+        <div class="item">
+            <mat-form-field appearance="fill">
+                <mat-label>Fill form field</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="item">
+            <mat-form-field appearance="outline">
+                <mat-label>Outline form field</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="item">
+            <mat-form-field appearance="fill">
+                <mat-label>Textarea</mat-label>
+                <textarea matInput></textarea>
+            </mat-form-field>
+        </div>
+        <div class="item">
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                <mat-icon matSuffix>mail</mat-icon>
+                <mat-hint>正确输入Email哦！</mat-hint>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+</section>
+
+<mat-divider></mat-divider>
+<h3>Dialog</h3>
+<section>
+    <ol>
+        <li>
+            <mat-form-field appearance="fill">
+                <mat-label>What's your name?</mat-label>
+                <input matInput [(ngModel)]="name">
+            </mat-form-field>
+        </li>
+        <li>
+            <button mat-raised-button (click)="openDialog()">Pick one</button>
+        </li>
+        <li *ngIf="animal">
+            You chose: <i>{{animal}}</i>
+        </li>
+    </ol>
+</section>

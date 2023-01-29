@@ -1,0 +1,97 @@
+<div [ngClass]="[themeClass, themeModel]" class="main-container mat-app-background">
+  <nav>
+    <mat-toolbar>
+      <button mat-icon-button class="mobile" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <a class="logo" [routerLink]="['']">
+        <img src="/assets/image/logo/apple-icon-60x60.png">
+      </a>
+      <h1 class="pc">AngularX</h1>
+      <span class="example-spacer"></span>
+      <a mat-button [routerLink]="['/demo-pages']" class="pc menu-link active">Menu 1</a>
+      <a mat-button [routerLink]="['/demo-pages']" class="pc menu-link">Menu 2</a>
+      <a mat-button [routerLink]="['/demo-pages']" class="pc menu-link">Menu 3</a>
+
+      <!-- 白天、黑夜模式切换 -->
+      <div class="pc" matTooltip="切换白天、黑夜模式">
+        <button mat-icon-button class="example-icon" *ngIf="themeModel===env.theme.themeModel.dark" (click)="setThemeModel(env.theme.themeModel.light)">
+          <mat-icon>dark_mode</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" *ngIf="themeModel===env.theme.themeModel.light" (click)="setThemeModel(env.theme.themeModel.dark)">
+          <mat-icon>light_mode</mat-icon>
+        </button>
+      </div>
+
+      <!-- 样式themes切换 -->
+      <button mat-icon-button class="example-icon" [matMenuTriggerFor]="colorPicker" class="pc" matTooltip="选择样式">
+        <mat-icon>format_color_fill</mat-icon>
+      </button>
+      <mat-menu #colorPicker="matMenu">
+        <button mat-menu-item (click)="pickTheme('app-pink-theme')" [ngClass]="[themeClass,themeClass==='app-pink-theme'?'color-swatch-btn-checked':'']"
+          class="color-swatch-btn">
+          <div class="color-swatch color-swatch-pink">
+            <div class="color-strip"></div>
+            <mat-icon class="color-swatch-icon">check_circle</mat-icon>
+          </div>
+        </button>
+        <button mat-menu-item (click)="pickTheme('app-green-theme')" [ngClass]="[themeClass,themeClass==='app-green-theme'?'color-swatch-btn-checked':'']"
+          class="color-swatch-btn">
+          <div class="color-swatch color-swatch-green">
+            <div class="color-strip"></div>
+            <mat-icon class="color-swatch-icon">check_circle</mat-icon>
+          </div>
+        </button>
+        <button mat-menu-item (click)="pickTheme('app-yellow-theme')" [ngClass]="[themeClass,themeClass==='app-yellow-theme'?'color-swatch-btn-checked':'']"
+          class="color-swatch-btn">
+          <div class="color-swatch color-swatch-yellow">
+            <div class="color-strip"></div>
+            <mat-icon class="color-swatch-icon">check_circle</mat-icon>
+          </div>
+        </button>
+        <button mat-menu-item (click)="pickTheme('app-blue-theme')" [ngClass]="[themeClass,themeClass==='app-blue-theme'?'color-swatch-btn-checked':'']"
+          class="color-swatch-btn">
+          <div class="color-swatch color-swatch-blue">
+            <div class="color-strip"></div>
+            <mat-icon class="color-swatch-icon">check_circle</mat-icon>
+          </div>
+        </button>
+      </mat-menu>
+      <button mat-icon-button class="example-icon">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </mat-toolbar>
+  </nav>
+  <mat-drawer-container autosize>
+    <mat-drawer #drawer class="drawer-sidenav" mode="over" hasBackdrop="true">
+      <div class="drawer-content">
+        <h1>溜溜球</h1>
+        <h1>留学申请</h1>
+
+        <a mat-button [routerLink]="['/demo-pages']" class="menu-link active">选校与网申</a>
+        <a mat-button [routerLink]="['/demo-pages']" class="menu-link">留学指南</a>
+        <a mat-button [routerLink]="['/demo-pages']" class="menu-link">学校排名</a>
+
+        <!-- 白天、黑夜模式切换开关 -->
+        <div>
+          <button mat-icon-button class="example-icon" *ngIf="themeModel===env.theme.themeModel.dark" (click)="setThemeModel(env.theme.themeModel.light)">
+            <mat-icon>dark_mode</mat-icon>
+          </button>
+          <button mat-icon-button class="example-icon" *ngIf="themeModel===env.theme.themeModel.light" (click)="setThemeModel(env.theme.themeModel.dark)">
+            <mat-icon>light_mode</mat-icon>
+          </button>
+        </div>
+
+        <!-- 样式themes切换 -->
+        <button mat-icon-button class="example-icon" [matMenuTriggerFor]="colorPicker">
+          <mat-icon>format_color_fill</mat-icon>
+        </button>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <div class="main-body">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
