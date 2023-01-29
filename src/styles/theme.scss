@@ -543,6 +543,7 @@ $app-dark-blue-theme: mat.define-dark-theme(
 
   @each $key, $value in $palette {
     @if $key !=contrast {
+      // e.g: .app-primary-100, .app-accent-500
       .app-#{$prefix}-#{$key} {
         color: map-get($palette, $key);
       }
@@ -579,31 +580,29 @@ $menu-underline-color-light: #3a3a3a;
 $menu-underline-color-dark: #ddd;
 
 .app-pink-theme {
-  @include generate-app-pink-classes;
   &.light-model {
+    @include generate-app-pink-classes;
     @include mat.all-component-colors($app-light-pink-theme);
     .mat-toolbar {
       background-color: mat.get-color-from-palette(
         $app-light-pink-primary,
         100
       );
-      .menu-link.active {
-        color: mat.get-color-from-palette($app-light-pink-primary, 900);
-      }
-      .menu-link::after {
-        background-color: mat.get-color-from-palette(
-          $app-light-pink-primary,
-          900
-        );
-      }
+    }
+    .menu-link.active {
+      color: mat.get-color-from-palette($app-light-pink-primary, 900);
+    }
+    .menu-link::after {
+      background-color: mat.get-color-from-palette(
+        $app-light-pink-primary,
+        900
+      );
     }
   }
   &.dark-model {
     @include mat.all-component-colors($app-dark-pink-theme);
-    .mat-toolbar {
-      .menu-link::after {
-        background-color: $menu-underline-color-dark;
-      }
+    .menu-link::after {
+      background-color: $menu-underline-color-dark;
     }
   }
 }
@@ -614,32 +613,30 @@ $menu-underline-color-dark: #ddd;
   @include generateColors(warning, $app-light-green-warn);
 }
 .app-green-theme {
-  @include generate-app-green-classes;
   &.light-model {
+    @include generate-app-green-classes;
     @include mat.all-component-colors($app-light-green-theme);
     .mat-toolbar {
       background-color: mat.get-color-from-palette(
         $app-light-green-primary,
         100
       );
+    }
 
-      .menu-link.active {
-        color: mat.get-color-from-palette($app-light-green-primary, 900);
-      }
-      .menu-link::after {
-        background-color: mat.get-color-from-palette(
-          $app-light-green-primary,
-          900
-        );
-      }
+    .menu-link.active {
+      color: mat.get-color-from-palette($app-light-green-primary, 900);
+    }
+    .menu-link::after {
+      background-color: mat.get-color-from-palette(
+        $app-light-green-primary,
+        900
+      );
     }
   }
   &.dark-model {
     @include mat.all-component-colors($app-dark-green-theme);
-    .mat-toolbar {
-      .menu-link::after {
-        background-color: $menu-underline-color-dark;
-      }
+    .menu-link::after {
+      background-color: $menu-underline-color-dark;
     }
   }
 }
@@ -650,31 +647,29 @@ $menu-underline-color-dark: #ddd;
   @include generateColors(warning, $app-light-yellow-warn);
 }
 .app-yellow-theme {
-  @include generate-app-yellow-classes;
   &.light-model {
+    @include generate-app-yellow-classes;
     @include mat.all-component-colors($app-light-yellow-theme);
     .mat-toolbar {
       background-color: mat.get-color-from-palette(
         $app-light-yellow-primary,
         100
       );
-      .menu-link.active {
-        color: mat.get-color-from-palette($app-light-yellow-primary, 900);
-      }
-      .menu-link::after {
-        background-color: mat.get-color-from-palette(
-          $app-light-yellow-primary,
-          900
-        );
-      }
+    }
+    .menu-link.active {
+      color: mat.get-color-from-palette($app-light-yellow-primary, 900);
+    }
+    .menu-link::after {
+      background-color: mat.get-color-from-palette(
+        $app-light-yellow-primary,
+        900
+      );
     }
   }
   &.dark-model {
     @include mat.all-component-colors($app-dark-yellow-theme);
-    .mat-toolbar {
-      .menu-link::after {
-        background-color: $menu-underline-color-dark;
-      }
+    .menu-link::after {
+      background-color: $menu-underline-color-dark;
     }
   }
 }
@@ -685,31 +680,29 @@ $menu-underline-color-dark: #ddd;
   @include generateColors(warning, $app-light-blue-warn);
 }
 .app-blue-theme {
-  @include generate-app-blue-classes;
   &.light-model {
+    @include generate-app-blue-classes;
     @include mat.all-component-colors($app-light-blue-theme);
     .mat-toolbar {
       background-color: mat.get-color-from-palette(
         $app-light-blue-primary,
         100
       );
-      .menu-link.active {
-        color: mat.get-color-from-palette($app-light-blue-primary, 900);
-      }
-      .menu-link::after {
-        background-color: mat.get-color-from-palette(
-          $app-light-blue-primary,
-          900
-        );
-      }
+    }
+    .menu-link.active {
+      color: mat.get-color-from-palette($app-light-blue-primary, 900);
+    }
+    .menu-link::after {
+      background-color: mat.get-color-from-palette(
+        $app-light-blue-primary,
+        900
+      );
     }
   }
   &.dark-model {
     @include mat.all-component-colors($app-dark-blue-theme);
-    .mat-toolbar {
-      .menu-link::after {
-        background-color: $menu-underline-color-dark;
-      }
+    .menu-link::after {
+      background-color: $menu-underline-color-dark;
     }
   }
 }

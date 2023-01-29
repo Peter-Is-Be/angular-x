@@ -35,10 +35,6 @@
     h1 {
       margin: 0;
     }
-    .example-spacer {
-      flex: 1 1 auto;
-    }
-
     .menu-link {
       position: relative;
       height: 100%;
@@ -69,14 +65,69 @@
     }
   }
 
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
   .drawer-sidenav {
     height: calc(100vh - $nav-height);
-    .drawer-content {
-      padding: 24px;
+    .drawer-menu-content {
       max-width: 100vw;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      justify-content: space-between;
+      height: 100%;
+      align-items: stretch;
+      .drawer-item {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+      .drawer-top {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .drawer-title {
+          font-size: 1.6em;
+          margin: 0 8px 16px 0;
+        }
+
+        .menu-link {
+          position: relative;
+          border-radius: 0;
+          font-size: 1em;
+          &.active {
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              height: 100%;
+              width: 4px;
+              border-radius: 2px;
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            width: 0;
+            border-radius: 2px;
+            transform: 0.5s;
+          }
+          &:hover:after {
+            width: 4px;
+          }
+        }
+      }
+      .drawer-bottom {
+        padding: 24px;
+      }
     }
   }
 

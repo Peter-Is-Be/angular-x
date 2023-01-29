@@ -63,29 +63,30 @@
     </mat-toolbar>
   </nav>
   <mat-drawer-container autosize>
+    <!-- 移动设备菜单 -->
     <mat-drawer #drawer class="drawer-sidenav" mode="over" hasBackdrop="true">
-      <div class="drawer-content">
-        <h1>溜溜球</h1>
-        <h1>留学申请</h1>
-
-        <a mat-button [routerLink]="['/demo-pages']" class="menu-link active">选校与网申</a>
-        <a mat-button [routerLink]="['/demo-pages']" class="menu-link">留学指南</a>
-        <a mat-button [routerLink]="['/demo-pages']" class="menu-link">学校排名</a>
-
+      <div class="drawer-menu-content">
+        <div class="drawer-top">
+          <h1 class="drawer-title">AngularX</h1>
+          <a mat-button [routerLink]="['/demo-pages']" class="menu-link active drawer-item"><mat-icon>mood</mat-icon> Menu 1</a>
+          <a mat-button [routerLink]="['/demo-pages']" class="menu-link drawer-item"><mat-icon>grouped_bar_chart</mat-icon> Menu 2</a>
+          <a mat-button [routerLink]="['/demo-pages']" class="menu-link drawer-item"><mat-icon>share</mat-icon> Menu 3</a>
+        </div>
         <!-- 白天、黑夜模式切换开关 -->
-        <div>
-          <button mat-icon-button class="example-icon" *ngIf="themeModel===env.theme.themeModel.dark" (click)="setThemeModel(env.theme.themeModel.light)">
-            <mat-icon>dark_mode</mat-icon>
+        <span class="example-spacer"></span>
+        <mat-divider></mat-divider>
+        <div class="drawer-bottom">
+          <button mat-button class="drawer-item" *ngIf="themeModel===env.theme.themeModel.dark" (click)="setThemeModel(env.theme.themeModel.light)">
+            <mat-icon>dark_mode</mat-icon> 切换为Light模式
           </button>
-          <button mat-icon-button class="example-icon" *ngIf="themeModel===env.theme.themeModel.light" (click)="setThemeModel(env.theme.themeModel.dark)">
-            <mat-icon>light_mode</mat-icon>
+          <button mat-button class="drawer-item" *ngIf="themeModel===env.theme.themeModel.light" (click)="setThemeModel(env.theme.themeModel.dark)">
+            <mat-icon>light_mode</mat-icon> 切换为Dark模式
+          </button>
+          <!-- 样式themes切换 -->
+          <button mat-button class="drawer-item" [matMenuTriggerFor]="colorPicker">
+            <mat-icon>format_color_fill</mat-icon> 更换样式
           </button>
         </div>
-
-        <!-- 样式themes切换 -->
-        <button mat-icon-button class="example-icon" [matMenuTriggerFor]="colorPicker">
-          <mat-icon>format_color_fill</mat-icon>
-        </button>
       </div>
     </mat-drawer>
     <mat-drawer-content>
